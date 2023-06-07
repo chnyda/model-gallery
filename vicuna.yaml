@@ -11,9 +11,9 @@ config_file: |
     backend: llama
     parameters:
       model: vicuna
-      top_k: 80
-      temperature: 0.2
-      top_p: 0.7
+      top_k: 5
+      temperature: 0.1
+      top_p: 0.1
     context_size: 512
     gpu_layers: 40
     template:
