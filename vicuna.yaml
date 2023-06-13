@@ -12,10 +12,10 @@ config_file: |
     parameters:
       model: vicuna
       top_k: 5
-      temperature: 0.1
+      temperature: 0.35
       top_p: 0.1
     context_size: 512
-    gpu_layers: 40
+    gpu_layers: 5
     template:
       completion: vicuna-completion
       chat: vicuna-chat
