@@ -14,7 +14,7 @@ config_file: |
       top_k: 5
       temperature: 0.35
       top_p: 0.1
-    context_size: 512
+    context_size: 4096
     gpu_layers: 400
     template:
       completion: vicuna-completion
