@@ -1,0 +1,35 @@
+name: "starcoder"
+
+description: |
+    Starcoder: An Open-Source Chatbot Impressing GPT-4 with 90% ChatGPT Quality
+
+license: "LLaMA"
+urls:
+- https://github.com/lm-sys/FastChat
+
+config_file: |
+    backend: llama
+    parameters:
+      model: starcoder
+      top_k: 5
+      temperature: 0.35
+      top_p: 0.1
+    context_size: 4096
+    gpu_layers: 400
+    template:
+      completion: starcoder-completion
+      chat: starcoder-chat
+
+prompt_templates:
+- name: "starcoder-completion"
+  content: |
+      {{.Input}}
+
+- name: "starcoder-chat"
+  content: |
+    Below is an instruction that describes a task. Write a response that appropriately completes the request.
+
+    ### Instruction:
+    {{.Input}}
+
+    ### Response:
